@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Search_Navbar from './components/Search_Navbar';
+import Card from './components/Card.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{marginTop:"1rem", marginBottom:"1.5rem",color:"white"}}>Weather Application</h1>      
+      <Search_Navbar></Search_Navbar>
+      {/* <Card ></Card> */}
+      
     </div>
   );
 }
