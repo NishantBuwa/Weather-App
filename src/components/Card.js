@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './Card.css';
-import clear from './images/clear.png';
 import clouds from './images/clouds.png';
 import clear_clouds from './images/clear-clouds.png';
 import drizzle from './images/drizzle.png';
