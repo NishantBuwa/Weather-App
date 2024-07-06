@@ -19,7 +19,7 @@ export default function Search_Navbar() {
     };
 
     const making_url = useCallback((cityName) => {
-        return `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},91&limit=1&appid=${API_KEY}`;
+        return `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},91&limit=1&appid=${API_KEY}`;
     }, [API_KEY]);
 
     const fetchData = useCallback(async (url) => {
