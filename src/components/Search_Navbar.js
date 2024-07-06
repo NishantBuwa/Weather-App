@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Card from './Card.js';
-import './Card.css'
+import './Card.css';
 
 export default function Search_Navbar() {
     const [city, setCity] = useState(''); 
@@ -9,7 +9,6 @@ export default function Search_Navbar() {
 
     const API_KEY = '2ddddaf43ef2bae00a5f3df2cc2dd620';
 
-   
     const handleCityChange = (event) => {
         setCity(event.target.value);
     };
@@ -19,12 +18,11 @@ export default function Search_Navbar() {
         handleApiCall(city);
     };
 
-    const making_url = (cityName) => {
-        const url = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},91&limit=1&appid=${API_KEY}`;
-        return url;
-    };
+    const making_url = useCallback((cityName) => {
+        return `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},91&limit=1&appid=${API_KEY}`;
+    }, [API_KEY]);
 
-    async function fetchData(url) {
+    const fetchData = useCallback(async (url) => {
         const response = await fetch(url);
         if (!response.ok) {
             console.log(`API call failed with error`);
@@ -33,9 +31,9 @@ export default function Search_Navbar() {
             const data = await response.json();
             return data;
         }
-    }
+    }, []);
 
-    const handleApiCall = (cityName) => {
+    const handleApiCall = useCallback((cityName) => {
         if (!cityName) {
             console.error('Please enter a city name');
             return;
@@ -52,7 +50,7 @@ export default function Search_Navbar() {
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
-    };
+    }, [making_url, fetchData]);
 
     useEffect(() => {
         handleApiCall('Delhi');
@@ -111,3 +109,4 @@ export default function Search_Navbar() {
         </div>
     );
 }
+
