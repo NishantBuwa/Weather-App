@@ -27,7 +27,7 @@ function useInterval(callback) {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [callback, 1000]);
+  }, [callback]);
 
   return value; 
 }

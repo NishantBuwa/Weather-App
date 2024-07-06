@@ -9,10 +9,7 @@ export default function Search_Navbar() {
 
     const API_KEY = '2ddddaf43ef2bae00a5f3df2cc2dd620';
 
-    useEffect(() => {
-        handleApiCall('Delhi');
-    }, []);
-
+   
     const handleCityChange = (event) => {
         setCity(event.target.value);
     };
@@ -56,6 +53,10 @@ export default function Search_Navbar() {
                 console.error('Error fetching data:', error);
             });
     };
+
+    useEffect(() => {
+        handleApiCall('Delhi');
+    }, [handleApiCall]);
 
     const weather_api_call = async (latitude, longitude, cityName) => {
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
