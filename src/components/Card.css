@@ -2,10 +2,9 @@
     border:4px solid white;
     width:30%;
     margin-bottom: 3rem;
-    backdrop-filter: blur(4px); /* Adjust the blur amount as needed */
-    background: rgba(255, 255, 255,0); /* Optional: to add a translucent background */
-    border-radius: 10px; /* Optional: to add rounded corners */
-    /* color:yellow; */
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255,0); 
+    border-radius: 10px; 
     color:#e30022;
 }
 .temperature{
@@ -24,9 +23,7 @@
 }
 .container h3{
     margin-top:1rem;
-    /* font-weight:750; */
     font-size:2rem;
-    /* color:orange; */
     
 }
 .container h5{
@@ -53,7 +50,6 @@
 .wind-speed{
     border:2px solid blue;
     background-color: blue;
-    /* border:2px solid black; */
     width:12rem;
 }
 .humidity{
@@ -65,14 +61,12 @@
 .wind-speed,
 .humidity{
     border-radius: 10px;
-    /* padding:0px 20px; */
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     height:4.5rem;
     font-size: 1rem;
     color:white;
-    /* border:2px solid red; */
 }
 h6{
     margin-top:.6rem;
@@ -91,21 +85,9 @@ h6{
 }
 .weather{
     margin-top:2rem;
-    /* font-weight:700; */
     margin-bottom:2rem;
     font-size:25px;
 }
-/* i{
-    margin-top:0px;
-    font-size: 20px;
-    margin-left:-40px;
-    border:1px solid black;
-    padding:2px 17px;
-    border-radius:7px;
-    background-color: rgb(7, 7, 220);
-    color:white;
-    text-align: center;
-} */
 .search{
     display:flex;
     justify-content: center;
@@ -153,9 +135,6 @@ h6{
     .container{
         width:70vw
     }
-    .temperature{
-        /* border:2px solid black; */
-    }
     .temperature img{
         height:30%;
         width:30%;
@@ -164,17 +143,12 @@ h6{
         font-size:1.5rem;
     }
     .date-time{
-        /* border:2px solid blue; */
         font-size:.7rem;
     }
     .small-card{
-        /* border:2px solid blue; */
-        /* padding:0rem 1rem ; */
-        /* width:100%; */
         display:flex;
         justify-content: space-around;
         align-items: center;
-        /* gap:1rem; */
     }
     .wind-speed, .humidity, h6{
         font-size:.7rem;  

@@ -3,14 +3,13 @@ import Card from './Card.js';
 import './Card.css'
 
 export default function Search_Navbar() {
-    const [city, setCity] = useState(''); // User input city
+    const [city, setCity] = useState(''); 
     const [weatherData, setWeatherData] = useState(null);
-    const [searchedCity, setSearchedCity] = useState('Delhi'); // Default to 'Delhi'
+    const [searchedCity, setSearchedCity] = useState('Delhi'); 
 
     const API_KEY = '2ddddaf43ef2bae00a5f3df2cc2dd620';
 
     useEffect(() => {
-        // Fetch weather data for default city (Delhi) when the component mounts
         handleApiCall('Delhi');
     }, []);
 
