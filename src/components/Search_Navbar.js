@@ -83,7 +83,7 @@ export default function Search_Navbar() {
                     <div className="container-fluid my-3 justify-content-center">
                         <form className="d-flex" role="search" onSubmit={handleSubmit}>
                             <input
-                                className="form-control me-2 custom-input"
+                                className="custom-input"
                                 type="search"
                                 placeholder="Enter City Name"
                                 aria-label="Search"

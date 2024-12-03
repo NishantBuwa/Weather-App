@@ -1,14 +1,22 @@
-@font-face{
+@font-face {
   font-family: 'MyFuturisticFont';
-  src:url('./Assets/Font/Myfont.otf')
+  src: url('./Assets/Font/Myfont.otf')
 }
-body{
+
+body {
   font-family: 'MyFuturisticFont';
-  margin:0;
-  padding:0;
-  height:100vh;
-  overflow:hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
 }
+
 .App {
   text-align: center;
+}
+
+@media (width<580px) {
+  h1{
+    font-size: 20px;
+  }
 }
